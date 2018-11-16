@@ -1,0 +1,14 @@
+Host *
+    ForwardAgent yes
+    ServerAliveInterval 10
+    ServerAliveCountMax 10000
+    TCPKeepAlive no
+    ControlMaster auto
+    ControlPath ~/.ssh/%h-%p-%r
+    ControlPersist 4h
+    Compression yes
+Host woo
+    HostName jump.mobike.io
+    User wuzhijun
+    Port 2222
+    IdentityFile ~/.ssh/id_rsa
